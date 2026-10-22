@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>SportStyle - Shoes & Apparel</title>
-    <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="top">
 
     <!-- Navigation -->
     <nav>
         <div class="logo">SPORTSTYLE</div>
 
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#products">Shoes</a></li>
-            <li><a href="#products">Clothing</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
-        <div class="cart">🛒 Cart</div>
+        <div class="cart">Cart</div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero / Home Section -->
+    <section class="hero" id="home">
 
         <div class="hero-text">
             <p>NEW COLLECTION 2026</p>
@@ -51,7 +52,19 @@
 
     </section>
 
-    <!-- Products -->
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <h2>About SportStyle</h2>
+            <p>
+                At SportStyle, we combine high-performance engineering with modern street style. 
+                Whether you're training for a marathon or gearing up for everyday wear, our collection 
+                is designed to deliver peak comfort, durability, and bold design.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
     <section class="products" id="products">
 
         <h2>Featured Products</h2>
@@ -92,13 +105,53 @@
 
     </section>
 
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Express Delivery</h3>
+                    <p>Fast worldwide shipping right to your doorstep with real-time tracking.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Shoe Fitting</h3>
+                    <p>Get personalized gait analysis and shoe size matching recommendations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>30-Day Easy Returns</h3>
+                    <p>Hassle-free return policy if you aren't 100% satisfied with your fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to our customer support team anytime.</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> Budzerocolina5@gmail.com</p>
+                <p><strong>Phone:</strong> +63 9770647838</p>
+                <p><strong>Location:</strong> Mandaue Subangdaku, Cebu, Philippines</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="about">
+    <footer>
         <h2>SPORTSTYLE</h2>
         <p>Move better. Live stronger.</p>
         <p>© 2026 SportStyle. All rights reserved.</p>
     </footer>
-<script src="js/script.js"></script>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" aria-label="Back to top">
+        ↑
+    </a>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

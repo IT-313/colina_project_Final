@@ -1,6 +1,10 @@
 /* =========================
-   RESET
+   RESET & GLOBAL
 ========================= */
+
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -12,6 +16,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #ffffff;
     color: #111111;
+}
+
+/* Offset sections for sticky navigation header */
+section {
+    scroll-margin-top: 70px;
 }
 
 
@@ -51,6 +60,7 @@ nav ul li a {
     color: #111;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.2s;
 }
 
 nav ul li a:hover {
@@ -112,6 +122,7 @@ nav ul li a:hover {
 
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 .hero-text button:hover {
@@ -133,8 +144,29 @@ nav ul li a:hover {
 
     transform: rotate(-15deg);
 
-    box-shadow:
-        20px 25px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 20px 25px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+    padding: 70px 8%;
+    background: #ffffff;
+}
+
+.about-section h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
 }
 
 
@@ -144,6 +176,7 @@ nav ul li a:hover {
 
 .products {
     padding: 70px 8%;
+    background: #fafafa;
 }
 
 .products h2 {
@@ -161,13 +194,15 @@ nav ul li a:hover {
 .product {
     padding-bottom: 25px;
 
-    background: #f5f5f5;
+    background: #ffffff;
+    border: 1px solid #eee;
 
     transition: 0.3s;
 }
 
 .product:hover {
     transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .product-image {
@@ -203,11 +238,74 @@ nav ul li a:hover {
 
 
 /* =========================
+   SERVICES SECTION
+========================= */
+
+.services-section {
+    padding: 70px 8%;
+    background: #ffffff;
+}
+
+.services-section h2 {
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    padding: 70px 8%;
+    background: #f4f4f4;
+}
+
+.contact-section h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+
+/* =========================
    FOOTER
 ========================= */
 
 footer {
-    margin-top: 30px;
     padding: 40px;
 
     background: #111;
@@ -219,6 +317,38 @@ footer {
 footer p {
     margin-top: 10px;
     color: #aaa;
+}
+
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background-color: #111111;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    background-color: #444444;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -248,7 +378,16 @@ footer p {
         height: 190px;
     }
 
-    .product-grid {
+    .product-grid,
+    .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
     }
 }
